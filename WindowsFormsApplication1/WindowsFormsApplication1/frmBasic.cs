@@ -7,11 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApplication1
 {
-
-
     public partial class frmBasic : Form
     {
         public frmBasic()
@@ -58,16 +57,6 @@ namespace WindowsFormsApplication1
         private void btnLower_Click(object sender, EventArgs e)
         {
             txtResult2.Text = txtStr2.Text.ToLower();
-        }
-
-        #endregion
-
-        #region Inheritance
-       
-        private void btnTest3_Click(object sender, EventArgs e) // Inheritance
-        {
-            ParendClass p = new ParendClass();
-            p.sayHello();
         }
 
         #endregion
@@ -172,13 +161,261 @@ namespace WindowsFormsApplication1
                 MessageBox.Show(name);
         }
 
+        private void btnLambda1_Click(object sender, EventArgs e)
+        {
+            string[] names = { "Tom", "Dick", "Harry", "Mary", "Jay" };
+            IEnumerable<string> query = names
+                .Where(n => n.Contains("a"))
+                .OrderBy(n => n.Length)
+                .Select(n => n.ToUpper());
+
+            foreach(string name in query)
+                MessageBox.Show(name);
+        }
+
+
         #endregion
 
+        #region Linq Queries
 
+        private void btnLinq1_Click(object sender, EventArgs e)
+        {
+            string[] names = { "Tom", "Dick", "Harry" };
+            IEnumerable<string> filteredNames = names.Where(n => n.Length >= 4);
+            foreach (string name in filteredNames)
+                MessageBox.Show(name);
+        }
+
+        #endregion
+
+        #region CompreHension
+
+        private void btnComprehension_Click(object sender, EventArgs e)
+        {
+            string[] names = { "Tom", "Disk", "Harry", "Mary", "Jay" };
+
+            IEnumerable<string> query =
+                from n in names
+                where n.Contains("a")
+                orderby n.Length
+                select n.ToUpper(); 
+
+            foreach (string name in query)
+                MessageBox.Show(name);
+        }
+
+        #endregion
+
+        #region Finally
+
+        private void btnFinally_Click(object sender, EventArgs e)
+        {
+            StreamReader reader = null;
+            try
+            {
+                reader = File.OpenText("file.txt");
+                if (reader.EndOfStream) return;
+                MessageBox.Show(reader.ReadToEnd());
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null) reader.Dispose();
+            }
+        }
+
+        #endregion
+
+        #region Class
+
+        private void btnClass_Click(object sender, EventArgs e)
+        {
+            Stock msft = new Stock("MSFT", 20, 1000);
+            MessageBox.Show(msft.Worth.ToString());             //20000
+            msft.CurrentPrice = 30;
+            MessageBox.Show(msft.Worth.ToString());             //30000
+            MessageBox.Show(msft.PurchasePrice.ToString());     //20
+            MessageBox.Show(msft.CurrentPrice.ToString());      //30
+            MessageBox.Show(msft.SharesOwned.ToString());       //1000
+            MessageBox.Show(msft.Symbol.ToString());            //MSFT
+            msft.Symbol = "MSFT EDIT";
+            MessageBox.Show(msft.Symbol);                       //MSFT EDIT
+        }
+
+        #endregion    
+
+        #region Inheritance
+
+        private void btnTest3_Click(object sender, EventArgs e) // Inheritance
+        {
+            Asset asset = new Asset();
+            asset.Name = "Pong";
+            StockInher msft = new StockInher() { Name = "MSFT", PurchasePrice = 20, CurrentPrice = 30, SharesOwned = 1000 };
+            House mansion = new House { Name = "McMansion", PurchasePrice = 200, CurrentPrice = 300, Mortgage = 2000 };
+            
+            MessageBox.Show(msft.Name + "," + msft.PurchasePrice + "," + msft.CurrentPrice + "," + msft.SharesOwned);
+            MessageBox.Show(mansion.Name);
+            mansion.Name = "Pong1";
+            MessageBox.Show(asset.Name);
+        }
+
+        #endregion
+
+        #region Interface
+
+        private void btnInterface_Click(object sender, EventArgs e)
+        {
+
+            #region Original Interface
+
+            //IEnumerator number = new Countdown();
+            //while (number.MoveNext())
+            //    MessageBox.Show(number.Current.ToString());
+
+            #endregion
+
+            #region Explicit Interface
+
+            Widget w = new Widget();
+            w.Foo();
+            ((I1)w).Foo();
+            ((I2)w).Foo();
+
+            #endregion
+                           
+        }
+
+        #endregion
+
+        #region Anonymous Types
+
+        public string Original;
+        public string Vowelless;
+        private void btnAnonymous_Click(object sender, EventArgs e)
+        {
+            string[] names = { "Tom", "Dick", "Harry", "Mary", "Jay" };
+            IEnumerable<frmBasic> temp =
+                from n in names
+                select new frmBasic
+                {
+                    Original = n,
+                    Vowelless = n.Replace("a", "").Replace("e", "").Replace("i", "")
+                                 .Replace("o", "").Replace("u", "")
+                };
+            IEnumerable<string> query = from item in temp
+                                        where item.Vowelless.Length > 2
+                                        select item.Original;
+            foreach (string element in query)
+                MessageBox.Show(element);
+        }
+
+        #endregion
+
+ 
+    }//Class
+}//NameSpace
+
+    #region Interface External
+
+        #region Original Interface
+
+            public interface IEnumerator
+            {
+                bool MoveNext();
+                object Current { get; }
+            }
+
+            internal class Countdown : IEnumerator
+            {
+                int count = 8;
+                public bool MoveNext() { return count-- > 2; }
+                public object Current { get { return count; } }
+            }
+
+        #endregion
+
+        #region Explicit Interface
+
+        interface I1 { void Foo();}
+        interface I2 { int Foo();}
+
+        public class Widget : I1, I2
+        {
+            public void Foo()
+            {
+                MessageBox.Show("Widget's implementation of I1.Foo");
+            }
+
+            int I2.Foo()
+            {
+                MessageBox.Show("widget's implementation of I2.Foo");
+                return 42;
+            }
+        }
+
+        #endregion
+
+      
+       
+    #endregion
+
+    #region Inheritance External
+
+        public class Asset
+        {
+        public string Name{get; set;}
+        public decimal PurchasePrice, CurrentPrice;
+        }
+
+        public class StockInher : Asset
+        {
+        public long SharesOwned;
+        }
+
+        public class House : Asset
+        {
+        public decimal Mortgage;
+        }
+
+    #endregion
+
+    #region Class External
+
+    public class Stock
+    {
+    string symbol;
+    decimal purchasePrice, currentPrice;
+    long sharesOwned;
+
+        public Stock(string symbol, decimal purchasePrice, long sharesOwned)
+        {
+        this.symbol = symbol;
+        this.purchasePrice = currentPrice = purchasePrice;
+        this.sharesOwned = sharesOwned;
+        }
+
+        public decimal CurrentPrice
+        { get { return currentPrice; } set { currentPrice = value; } }
+
+        public string Symbol
+        { get { return symbol; } set { symbol = value; } }
+
+        public decimal PurchasePrice 
+        { get { return purchasePrice; } }
+
+        public long SharesOwned
+        { get { return sharesOwned; } }
+
+        public decimal Worth
+        { get { return CurrentPrice * SharesOwned; } }
     }
-}
 
-#region Delegate External
+#endregion
+
+    #region Delegate External
 
     public delegate int Transformer(int x);
     public class Util
@@ -186,23 +423,21 @@ namespace WindowsFormsApplication1
         public static void Transform(int[] values, Transformer t)
         {
             for (int i = 0; i < values.Length; i++)
-            {
-            values[i] = t(values[i]);
-            }
+                values[i] = t(values[i]);
         }
     }
 
-#endregion
-  
-#region Generics External
+    #endregion
+
+    #region Generics External
 
     class Swapper<T>
     {
         public static void Swap(ref T a, ref T b)
         {
-        T temp = a;
-        a = b;
-        b = temp;
+            T temp = a;
+            a = b;
+            b = temp;
         }
     }
 
@@ -211,46 +446,46 @@ namespace WindowsFormsApplication1
         public string name { get; set; }
         public override string ToString()
         {
-        return this.name;
+            return this.name;
         }
     }
 
-#endregion
+    #endregion
 
-#region Enum External
+    #region Enum External
 
-        enum Importance
-        {
-            None,
-            Trivial,
-            Regular,
-            Important,
-            Critical
-        };
+    enum Importance
+    {
+        None,
+        Trivial,
+        Regular,
+        Important,
+        Critical
+    };
 
-        enum E_v
-        {
-            None,
-            Hidden = 3,
-            Visible = 4
-        };
+    enum E_v
+    {
+        None,
+        Hidden = 3,
+        Visible = 4
+    };
 
-        enum E_b
-        {
-            None = 0,
-            Cat = 1,
-            Dog = 2
-        };
+    enum E_b
+    {
+        None = 0,
+        Cat = 1,
+        Dog = 2
+    };
 
-#endregion
+    #endregion
 
-#region Polymorphism External
+    #region Polymorphism External
 
     class A
     {
         public virtual void Print()
         {
-        MessageBox.Show("class A"); 
+            MessageBox.Show("class A");
         }
     }
 
@@ -258,7 +493,7 @@ namespace WindowsFormsApplication1
     {
         public override void Print()
         {
-        MessageBox.Show("class B");
+            MessageBox.Show("class B");
         }
     }
 
@@ -266,20 +501,10 @@ namespace WindowsFormsApplication1
     {
         public new void Print()
         {
-        MessageBox.Show("class C");
+            MessageBox.Show("class C");
         }
     }
 
-#endregion
+    #endregion
 
-#region Inheritance External
 
-class ParendClass
-    {
-        public void sayHello()
-        {
-        MessageBox.Show("Hello SSD");
-        }
-    }
-
-#endregion

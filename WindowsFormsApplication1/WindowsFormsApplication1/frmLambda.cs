@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
+
     public partial class frmLambda : Form
     {
         public frmLambda()
@@ -42,8 +43,18 @@ namespace WindowsFormsApplication1
                     break;
 
             }
-                  foreach (var n in query)
-                  listView1.Items.Add(n);           
+            //for (int i = 1; i <= query.Count(); i++)
+            //{
+            //    MessageBox.Show(query[i]);
+            //}
+            //foreach (var i in query)
+            //    MessageBox.Show(i);
+            foreach (var n in query)
+            {
+                listView1.Items.Add(n); 
+            }
+                  //foreach (var n in query)
+                  //listView1.Items.Add(n);           
         }
 
         private void frmLambda_Load(object sender, EventArgs e)

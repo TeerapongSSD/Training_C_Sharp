@@ -41,8 +41,6 @@
             this.btnTestInher = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnTestPoly = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnTestInter = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btnNumE = new System.Windows.Forms.Button();
             this.cmbEnum = new System.Windows.Forms.ComboBox();
@@ -53,15 +51,38 @@
             this.btnDelegate = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.btnLambda = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.btnList = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.btnLinq1 = new System.Windows.Forms.Button();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.btnLambda1 = new System.Windows.Forms.Button();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.btnComprehension = new System.Windows.Forms.Button();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.btnFinally = new System.Windows.Forms.Button();
+            this.btnInterface = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.btnClass = new System.Windows.Forms.Button();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.btnAnonymous = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox16.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnParameter
@@ -153,7 +174,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnTestInher);
-            this.groupBox3.Location = new System.Drawing.Point(12, 196);
+            this.groupBox3.Location = new System.Drawing.Point(234, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 86);
             this.groupBox3.TabIndex = 5;
@@ -173,7 +194,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnTestPoly);
-            this.groupBox4.Location = new System.Drawing.Point(12, 288);
+            this.groupBox4.Location = new System.Drawing.Point(234, 104);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 86);
             this.groupBox4.TabIndex = 6;
@@ -190,31 +211,12 @@
             this.btnTestPoly.UseVisualStyleBackColor = true;
             this.btnTestPoly.Click += new System.EventHandler(this.btnTest4_Click);
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.btnTestInter);
-            this.groupBox5.Location = new System.Drawing.Point(12, 380);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 86);
-            this.groupBox5.TabIndex = 7;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Interface Test";
-            // 
-            // btnTestInter
-            // 
-            this.btnTestInter.Location = new System.Drawing.Point(51, 36);
-            this.btnTestInter.Name = "btnTestInter";
-            this.btnTestInter.Size = new System.Drawing.Size(88, 23);
-            this.btnTestInter.TabIndex = 0;
-            this.btnTestInter.Text = "Test";
-            this.btnTestInter.UseVisualStyleBackColor = true;
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.btnNumE);
             this.groupBox6.Controls.Add(this.cmbEnum);
             this.groupBox6.Controls.Add(this.btnEnum);
-            this.groupBox6.Location = new System.Drawing.Point(233, 12);
+            this.groupBox6.Location = new System.Drawing.Point(12, 288);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(200, 86);
             this.groupBox6.TabIndex = 8;
@@ -252,7 +254,7 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.btnGeneric);
-            this.groupBox7.Location = new System.Drawing.Point(233, 104);
+            this.groupBox7.Location = new System.Drawing.Point(234, 196);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(200, 86);
             this.groupBox7.TabIndex = 8;
@@ -272,7 +274,7 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.btnDelegate);
-            this.groupBox8.Location = new System.Drawing.Point(234, 196);
+            this.groupBox8.Location = new System.Drawing.Point(235, 288);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(200, 86);
             this.groupBox8.TabIndex = 9;
@@ -292,7 +294,7 @@
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.btnLambda);
-            this.groupBox9.Location = new System.Drawing.Point(233, 288);
+            this.groupBox9.Location = new System.Drawing.Point(234, 380);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(200, 86);
             this.groupBox9.TabIndex = 10;
@@ -309,11 +311,177 @@
             this.btnLambda.UseVisualStyleBackColor = true;
             this.btnLambda.Click += new System.EventHandler(this.btnLambda_Click);
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.btnList);
+            this.groupBox10.Location = new System.Drawing.Point(682, 104);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(200, 86);
+            this.groupBox10.TabIndex = 11;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "List<T> Test";
+            // 
+            // btnList
+            // 
+            this.btnList.Location = new System.Drawing.Point(51, 36);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(88, 23);
+            this.btnList.TabIndex = 0;
+            this.btnList.Text = "Test";
+            this.btnList.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.btnLinq1);
+            this.groupBox11.Location = new System.Drawing.Point(458, 12);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(200, 86);
+            this.groupBox11.TabIndex = 12;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "LinqQueries Test";
+            // 
+            // btnLinq1
+            // 
+            this.btnLinq1.Location = new System.Drawing.Point(51, 36);
+            this.btnLinq1.Name = "btnLinq1";
+            this.btnLinq1.Size = new System.Drawing.Size(88, 23);
+            this.btnLinq1.TabIndex = 0;
+            this.btnLinq1.Text = "Test";
+            this.btnLinq1.UseVisualStyleBackColor = true;
+            this.btnLinq1.Click += new System.EventHandler(this.btnLinq1_Click);
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.btnLambda1);
+            this.groupBox12.Location = new System.Drawing.Point(458, 104);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(200, 86);
+            this.groupBox12.TabIndex = 13;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "LambdaQueries Test";
+            // 
+            // btnLambda1
+            // 
+            this.btnLambda1.Location = new System.Drawing.Point(51, 36);
+            this.btnLambda1.Name = "btnLambda1";
+            this.btnLambda1.Size = new System.Drawing.Size(88, 23);
+            this.btnLambda1.TabIndex = 0;
+            this.btnLambda1.Text = "Test";
+            this.btnLambda1.UseVisualStyleBackColor = true;
+            this.btnLambda1.Click += new System.EventHandler(this.btnLambda1_Click);
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.btnComprehension);
+            this.groupBox13.Location = new System.Drawing.Point(458, 196);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(200, 86);
+            this.groupBox13.TabIndex = 14;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Comprehension Test";
+            // 
+            // btnComprehension
+            // 
+            this.btnComprehension.Location = new System.Drawing.Point(51, 36);
+            this.btnComprehension.Name = "btnComprehension";
+            this.btnComprehension.Size = new System.Drawing.Size(88, 23);
+            this.btnComprehension.TabIndex = 0;
+            this.btnComprehension.Text = "Test";
+            this.btnComprehension.UseVisualStyleBackColor = true;
+            this.btnComprehension.Click += new System.EventHandler(this.btnComprehension_Click);
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.btnFinally);
+            this.groupBox14.Location = new System.Drawing.Point(12, 196);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(200, 86);
+            this.groupBox14.TabIndex = 15;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "FinallyBlock Test";
+            // 
+            // btnFinally
+            // 
+            this.btnFinally.Location = new System.Drawing.Point(51, 36);
+            this.btnFinally.Name = "btnFinally";
+            this.btnFinally.Size = new System.Drawing.Size(88, 23);
+            this.btnFinally.TabIndex = 0;
+            this.btnFinally.Text = "Test";
+            this.btnFinally.UseVisualStyleBackColor = true;
+            this.btnFinally.Click += new System.EventHandler(this.btnFinally_Click);
+            // 
+            // btnInterface
+            // 
+            this.btnInterface.Location = new System.Drawing.Point(51, 36);
+            this.btnInterface.Name = "btnInterface";
+            this.btnInterface.Size = new System.Drawing.Size(88, 23);
+            this.btnInterface.TabIndex = 0;
+            this.btnInterface.Text = "Test";
+            this.btnInterface.UseVisualStyleBackColor = true;
+            this.btnInterface.Click += new System.EventHandler(this.btnInterface_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnInterface);
+            this.groupBox5.Location = new System.Drawing.Point(682, 12);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 86);
+            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Interface Test";
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.btnClass);
+            this.groupBox15.Location = new System.Drawing.Point(12, 386);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(200, 86);
+            this.groupBox15.TabIndex = 8;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Class Test";
+            // 
+            // btnClass
+            // 
+            this.btnClass.Location = new System.Drawing.Point(51, 36);
+            this.btnClass.Name = "btnClass";
+            this.btnClass.Size = new System.Drawing.Size(88, 23);
+            this.btnClass.TabIndex = 0;
+            this.btnClass.Text = "Test";
+            this.btnClass.UseVisualStyleBackColor = true;
+            this.btnClass.Click += new System.EventHandler(this.btnClass_Click);
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.btnAnonymous);
+            this.groupBox16.Location = new System.Drawing.Point(682, 196);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(200, 86);
+            this.groupBox16.TabIndex = 12;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Anonymous Test";
+            // 
+            // btnAnonymous
+            // 
+            this.btnAnonymous.Location = new System.Drawing.Point(51, 36);
+            this.btnAnonymous.Name = "btnAnonymous";
+            this.btnAnonymous.Size = new System.Drawing.Size(88, 23);
+            this.btnAnonymous.TabIndex = 0;
+            this.btnAnonymous.Text = "Test";
+            this.btnAnonymous.UseVisualStyleBackColor = true;
+            this.btnAnonymous.Click += new System.EventHandler(this.btnAnonymous_Click);
+            // 
             // frmBasic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 484);
+            this.ClientSize = new System.Drawing.Size(893, 484);
+            this.Controls.Add(this.groupBox16);
+            this.Controls.Add(this.groupBox15);
+            this.Controls.Add(this.groupBox14);
+            this.Controls.Add(this.groupBox13);
+            this.Controls.Add(this.groupBox12);
+            this.Controls.Add(this.groupBox11);
+            this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
@@ -333,11 +501,18 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -357,8 +532,6 @@
         private System.Windows.Forms.Button btnTestInher;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnTestPoly;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button btnTestInter;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button btnEnum;
         private System.Windows.Forms.ComboBox cmbEnum;
@@ -369,5 +542,21 @@
         private System.Windows.Forms.Button btnDelegate;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button btnLambda;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Button btnList;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Button btnLinq1;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Button btnLambda1;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button btnComprehension;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Button btnFinally;
+        private System.Windows.Forms.Button btnInterface;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Button btnClass;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.Button btnAnonymous;
     }
 }
