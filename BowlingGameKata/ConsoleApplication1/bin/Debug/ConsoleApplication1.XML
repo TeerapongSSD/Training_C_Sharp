@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>ConsoleApplication1</name></assembly>
+<members>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Program.score(Microsoft.FSharp.Collections.FSharpList{System.Int32})">
+<summary>
+ Bowling rules: http://en.wikipedia.org/wiki/Ten-pin_bowling
+</summary>
+</member>
+<member name="T:Program">
+
+</member>
+</members>
+</doc>

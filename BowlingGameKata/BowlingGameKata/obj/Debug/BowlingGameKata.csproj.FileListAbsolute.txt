@@ -1,0 +1,21 @@
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata\bin\Debug\BowlingGameKata.exe.config
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata\bin\Debug\BowlingGameKata.exe
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata\bin\Debug\BowlingGameKata.pdb
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata\obj\Debug\BowlingGameKata.exe
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata\obj\Debug\BowlingGameKata.pdb
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata\obj\Debug\BowlingGameKata.csprojResolveAssemblyReference.cache
+C:\Rattapon\BowlingGameKata\BowlingGameKata - Copy\BowlingGameKata\bin\Debug\BowlingGameKata.exe.config
+C:\Rattapon\BowlingGameKata\BowlingGameKata - Copy\BowlingGameKata\obj\Debug\BowlingGameKata.exe
+C:\Rattapon\BowlingGameKata\BowlingGameKata - Copy\BowlingGameKata\obj\Debug\BowlingGameKata.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata\bin\Debug\BowlingGameKata.exe.config
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata\obj\Debug\BowlingGameKata.exe
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata\obj\Debug\BowlingGameKata.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata\bin\Debug\BowlingGameKata.exe
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata\bin\Debug\BowlingGameKata.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata\obj\Debug\BowlingGameKata.csprojResolveAssemblyReference.cache
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata\bin\Debug\BowlingGameKata.exe.config
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata\obj\Debug\BowlingGameKata.exe
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata\obj\Debug\BowlingGameKata.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata\bin\Debug\BowlingGameKata.exe
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata\bin\Debug\BowlingGameKata.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata\obj\Debug\BowlingGameKata.csprojResolveAssemblyReference.cache

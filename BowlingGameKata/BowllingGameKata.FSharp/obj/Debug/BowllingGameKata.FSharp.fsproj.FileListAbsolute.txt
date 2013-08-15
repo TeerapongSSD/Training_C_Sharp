@@ -1,0 +1,7 @@
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowllingGameKata.FSharp\bin\Debug\BowllingGameKata.FSharp.XML
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowllingGameKata.FSharp\bin\Debug\BowllingGameKata.FSharp.dll
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowllingGameKata.FSharp\bin\Debug\BowllingGameKata.FSharp.pdb
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowllingGameKata.FSharp\bin\Debug\FSharp.Core.dll
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowllingGameKata.FSharp\bin\Debug\FSharp.Core.xml
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowllingGameKata.FSharp\obj\Debug\BowllingGameKata.FSharp.dll
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowllingGameKata.FSharp\obj\Debug\BowllingGameKata.FSharp.pdb

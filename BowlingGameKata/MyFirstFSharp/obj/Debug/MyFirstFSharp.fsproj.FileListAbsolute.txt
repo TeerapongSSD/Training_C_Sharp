@@ -1,0 +1,8 @@
+C:\Rattapon\BowlingGameKata\BowlingGameKata\MyFirstFSharp\bin\Debug\MyFirstFSharp.exe.config
+C:\Rattapon\BowlingGameKata\BowlingGameKata\MyFirstFSharp\bin\Debug\MyFirstFSharp.XML
+C:\Rattapon\BowlingGameKata\BowlingGameKata\MyFirstFSharp\bin\Debug\MyFirstFSharp.exe
+C:\Rattapon\BowlingGameKata\BowlingGameKata\MyFirstFSharp\bin\Debug\MyFirstFSharp.pdb
+C:\Rattapon\BowlingGameKata\BowlingGameKata\MyFirstFSharp\bin\Debug\FSharp.Core.dll
+C:\Rattapon\BowlingGameKata\BowlingGameKata\MyFirstFSharp\bin\Debug\FSharp.Core.xml
+C:\Rattapon\BowlingGameKata\BowlingGameKata\MyFirstFSharp\obj\Debug\MyFirstFSharp.exe
+C:\Rattapon\BowlingGameKata\BowlingGameKata\MyFirstFSharp\obj\Debug\MyFirstFSharp.pdb

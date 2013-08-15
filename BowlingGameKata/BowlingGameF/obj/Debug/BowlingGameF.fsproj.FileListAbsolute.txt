@@ -1,0 +1,8 @@
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameF\bin\Debug\BowlingGameF.exe.config
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameF\bin\Debug\BowlingGameF.XML
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameF\bin\Debug\BowlingGameF.exe
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameF\bin\Debug\BowlingGameF.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameF\bin\Debug\FSharp.Core.dll
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameF\bin\Debug\FSharp.Core.xml
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameF\obj\Debug\BowlingGameF.exe
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameF\obj\Debug\BowlingGameF.pdb

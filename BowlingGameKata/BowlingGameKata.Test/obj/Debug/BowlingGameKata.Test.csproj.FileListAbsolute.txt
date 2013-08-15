@@ -1,0 +1,30 @@
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowlingGameKata.Test.dll
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowlingGameKata.Test.pdb
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowlingGameKata.exe
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowllingGameKata.FSharp.dll
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\bin\Debug\nunit.framework.dll
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowlingGameKata.pdb
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowllingGameKata.FSharp.pdb
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowllingGameKata.FSharp.xml
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\bin\Debug\nunit.framework.xml
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\obj\Debug\BowlingGameKata.Test.csprojResolveAssemblyReference.cache
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\obj\Debug\BowlingGameKata.Test.dll
+C:\Rattapon\BowlingGameKata\BowlingGameKata\BowlingGameKata.Test\obj\Debug\BowlingGameKata.Test.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata.Test\obj\Debug\BowlingGameKata.Test.csprojResolveAssemblyReference.cache
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata.Test\obj\Debug\BowlingGameKata.Test.dll
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata.Test\obj\Debug\BowlingGameKata.Test.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata.Test\bin\Debug\BowlingGameKata.Test.dll
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata.Test\bin\Debug\BowlingGameKata.Test.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata.Test\bin\Debug\BowlingGameKata.exe
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata.Test\bin\Debug\nunit.framework.dll
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata.Test\bin\Debug\BowlingGameKata.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata - Copy\BowlingGameKata.Test\bin\Debug\nunit.framework.xml
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowlingGameKata.Test.dll
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowlingGameKata.Test.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowlingGameKata.exe
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata.Test\bin\Debug\nunit.framework.dll
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata.Test\bin\Debug\BowlingGameKata.pdb
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata.Test\bin\Debug\nunit.framework.xml
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata.Test\obj\Debug\BowlingGameKata.Test.csprojResolveAssemblyReference.cache
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata.Test\obj\Debug\BowlingGameKata.Test.dll
+C:\Users\Admin-Teerapong\Desktop\BowlingGameKata\BowlingGameKata.Test\obj\Debug\BowlingGameKata.Test.pdb
