@@ -1,0 +1,21 @@
+using System;
+using System.Linq;
+
+public class FizzBuzz 
+{
+  public static void Main()
+  {
+    var nuturalNumbers = Enumerable.Range(1, 100);
+
+    foreach(var n in nuturalNumbers)
+    {
+      if(n % 15 == 0) { Console.WriteLine("FizzBuzz"); continue; }
+
+      if(n % 3 == 0) { Console.WriteLine("Fizz"); continue; }
+      
+      if(n % 5 == 0) { Console.WriteLine("Buzz"); continue; }
+
+      Console.WriteLine(n);
+    }
+  }
+}
