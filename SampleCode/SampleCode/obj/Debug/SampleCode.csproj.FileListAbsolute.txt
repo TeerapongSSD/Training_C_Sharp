@@ -1,0 +1,9 @@
+C:\Users\Admin-Teerapong\Desktop\SampleCode\SampleCode\bin\Debug\SampleCode.exe.config
+C:\Users\Admin-Teerapong\Desktop\SampleCode\SampleCode\bin\Debug\SampleCode.exe
+C:\Users\Admin-Teerapong\Desktop\SampleCode\SampleCode\bin\Debug\SampleCode.pdb
+C:\Users\Admin-Teerapong\Desktop\SampleCode\SampleCode\obj\Debug\SampleCode.csprojResolveAssemblyReference.cache
+C:\Users\Admin-Teerapong\Desktop\SampleCode\SampleCode\obj\Debug\SampleCode.Form1.resources
+C:\Users\Admin-Teerapong\Desktop\SampleCode\SampleCode\obj\Debug\SampleCode.Properties.Resources.resources
+C:\Users\Admin-Teerapong\Desktop\SampleCode\SampleCode\obj\Debug\SampleCode.csproj.GenerateResource.Cache
+C:\Users\Admin-Teerapong\Desktop\SampleCode\SampleCode\obj\Debug\SampleCode.exe
+C:\Users\Admin-Teerapong\Desktop\SampleCode\SampleCode\obj\Debug\SampleCode.pdb
