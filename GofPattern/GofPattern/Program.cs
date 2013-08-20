@@ -16,7 +16,7 @@ namespace GofPattern
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLinq());
+            Application.Run(new frmGof());
         }
     }
 }

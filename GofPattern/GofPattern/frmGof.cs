@@ -17,13 +17,19 @@ namespace GofPattern
             InitializeComponent();
         }
 
+        #region Singleton
+
         private void btnSingleton_Click(object sender, EventArgs e)
         {
             Singleton data1 = Singleton.GetInstance();
             Singleton data2 = Singleton.GetInstance();
             StateA data3 = new StateA();
-            MessageBox.Show((data1 == data2).ToString());   
+            MessageBox.Show((data1 == data2).ToString());
         }
+
+        #endregion
+
+        #region Template Method
 
         private void btnTemplate_Click(object sender, EventArgs e)
         {
@@ -34,6 +40,10 @@ namespace GofPattern
             aB.TemplateMethod();
         }
 
+        #endregion
+
+        #region Composite
+
         private void btnComposite_Click(object sender, EventArgs e)
         {
             CompositeSSD Test1 = new CompositeSSD("Mr.Test1", 1);
@@ -41,9 +51,9 @@ namespace GofPattern
             CompositeOntheRoad Test3 = new CompositeOntheRoad("Mr.Test3", 3);
             CompositeOntheRoad Test4 = new CompositeOntheRoad("Mr.Test4", 4);
             CompositeSSD Test5 = new CompositeSSD("Mr.Test5", 5);
-         
-            Test2.AddSubordinate(Test1);  
-            Test3.AddSubordinate(Test2); 
+
+            Test2.AddSubordinate(Test1);
+            Test3.AddSubordinate(Test2);
             Test3.AddSubordinate(Test4);
             Test4.AddSubordinate(Test5);
 
@@ -52,6 +62,10 @@ namespace GofPattern
                 (Test3 as IEmployee).ShowNumber();
             }
         }
+
+        #endregion
+
+        #region  Abstract Factory
 
         private void btnAbstract_Click(object sender, EventArgs e)
         {
@@ -64,6 +78,10 @@ namespace GofPattern
             SsdBread.Bake();
         }
 
+        #endregion
+
+        #region State
+
         private void btnState_Click(object sender, EventArgs e)
         {
             Context test = new Context(new StateA());
@@ -72,13 +90,83 @@ namespace GofPattern
             test.Request();
         }
 
-        private void frmGof_Load(object sender, EventArgs e)
-        {
+        #endregion
 
+        #region Iterator
+
+        private void btnIterator_Click(object sender, EventArgs e)
+        {
+            foreach (var n in TestIterator(0, 10))
+            {
+                MessageBox.Show(n.ToString());
+            }
         }
+
+        public static System.Collections.Generic.IEnumerable<int> TestIterator(int Number1, int Number2)
+        {
+            for (var n = Number1; n <= Number2; n++)
+            {
+                if (n % 3 == 0)
+                {
+                    yield return n;
+                }
+            }
+        }
+
+        #endregion
+
+        #region Factory
+
+        private void btnFactory_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i <= 2; i++)
+            {
+                var position = Factory.Get(i);
+                MessageBox.Show(position.Title);
+            }
+        }
+
+        #endregion
+
+        #region Facade
+
+        private void btnFacade_Click(object sender, EventArgs e)
+        {
+            Facade facade = new Facade();
+            facade.MethodOne();
+            facade.MethodTwo();
+        }
+
+        #endregion
+
+        #region Obsever
+
+        private void btnObsever_Click(object sender, EventArgs e)
+        {
+            ConcreteSubject s = new ConcreteSubject();
+            s.Attach(new ConcreteObserver(s, "X"));
+            s.Attach(new ConcreteObserver(s, "Y"));
+            s.Attach(new ConcreteObserver(s, "Z"));
+            s.SubjectState = "ABC";
+            s.Notify();
+
+            //IBM ibm = new IBM("IBM", 120.00);
+            //ibm.Attach(new Investor("Sorros"));
+            //ibm.Attach(new Investor("Berkshire"));
+
+            //// Fluctuating prices will notify investors
+            //ibm.Price = 120.10;
+            //ibm.Price = 121.00;
+
+            // Wait for user
+          
+        }
+
+        #endregion
+
     }
 
-    # region Singleton
+    # region Singleton Class
 
     public class Singleton
     {
@@ -96,7 +184,7 @@ namespace GofPattern
 
     #endregion
 
-    #region Templete Method
+    #region Templete Method Class
 
     abstract class AbstractClass
     {
@@ -136,7 +224,7 @@ namespace GofPattern
 
     #endregion
 
-    #region Composite
+    #region Composite Class
 
     public interface IEmployee
     {
@@ -188,7 +276,7 @@ namespace GofPattern
 
     #endregion
 
-    #region Abstract Factory
+    #region Abstract Factory Class
 
     public enum CompanyBase
     {
@@ -260,7 +348,7 @@ namespace GofPattern
 
     #endregion
 
-    #region State
+    #region State Class
 
     abstract class State
     {
@@ -307,4 +395,271 @@ namespace GofPattern
 
     #endregion
 
+    #region Factory Class
+
+   abstract class Position
+   {
+       public abstract string Title { get; }
+   }
+
+   class Manager : Position
+   {
+       public override string Title
+       {
+           get
+           {
+               return "Manager";
+           }
+       }
+   }
+
+   class Admin : Position
+   {
+       public override string Title
+       {
+           get
+           {
+               return "Admin";
+           }
+       }
+   }
+
+   class Programmer : Position
+   {
+       public override string Title
+       {
+           get
+           {
+               return "Programmer";
+           }
+       }
+   }
+
+   static class Factory
+   {
+       public static Position Get(int id)
+       {
+           switch (id)
+           {
+               case 0:
+                   return new Manager();
+               case 1:
+                   return new Admin();
+               default:
+                   return new Programmer();
+           }
+       }
+   }
+
+   #endregion
+
+   #region Facade Class
+
+   class FacadeOne
+   {
+       public void MethodOne()
+       {
+           MessageBox.Show(" Facade One");
+       }
+   }
+
+   class FacadeTwo
+   {
+       public void MethodTwo()
+       {
+           MessageBox.Show(" Facade Two");
+       }
+   }
+
+   class FacadeThree
+   {
+       public void MethodThree()
+       {
+           MessageBox.Show(" Facade Three");
+       }
+   }
+
+   class Facade
+   {
+       private FacadeOne _one;
+       private FacadeTwo _two;
+       private FacadeThree _three;
+
+       public Facade()
+       {
+           _one = new FacadeOne();
+           _two = new FacadeTwo();
+           _three = new FacadeThree();
+       }
+
+       public void MethodOne()
+       {
+           MessageBox.Show(" MethodOne() ***** ");
+           _one.MethodOne();
+           _two.MethodTwo();
+       }
+
+       public void MethodTwo()
+       {
+           MessageBox.Show(" MethodTwo() ***** ");
+           _two.MethodTwo();
+           _three.MethodThree();
+       }
+   }
+
+   #endregion
+
+   #region Observer Class
+
+   abstract class Subject
+  {
+    private List<Observer> _observers = new List<Observer>();
+ 
+    public void Attach(Observer observer)
+    {
+      _observers.Add(observer);
+    }
+ 
+    public void Detach(Observer observer)
+    {
+      _observers.Remove(observer);
+    }
+ 
+    public void Notify()
+    {
+      foreach (Observer o in _observers)
+      {
+        o.Update();
+      }
+    }
+  }
+ 
+  class ConcreteSubject : Subject
+  {
+    private string _subjectState;
+    public string SubjectState
+    {
+      get { return _subjectState; }
+      set { _subjectState = value; }
+    }
+  }
+
+  abstract class Observer
+  {
+    public abstract void Update();
+  }
+
+  class ConcreteObserver : Observer
+  {
+    private string _name;
+    private string _observerState;
+    private ConcreteSubject _subject;
+
+    public ConcreteObserver(
+      ConcreteSubject subject, string name)
+    {
+      this._subject = subject;
+      this._name = name;
+    }
+ 
+    public override void Update()
+    {
+      _observerState = _subject.SubjectState;
+
+      Console.WriteLine("Observer {0}'s new state is {1}",_name, _observerState);
+      MessageBox.Show( _name , _observerState);
+    }
+
+    public ConcreteSubject Subject
+    {
+      get { return _subject; }
+      set { _subject = value; }
+    }
+  }
+
+   #endregion
+
+
+  //// The 'ConcreteObserver' class
+  //class Investor : IInvestor
+  //{
+  //    private string _name;
+  //    private Stock _stock;
+  //    public Investor(string name)
+  //    {
+  //        this._name = name;
+  //    }
+  //    public void Update(Stock stock)
+  //    {
+  //        Console.WriteLine("Notified {0} of {1}'s " +
+  //          "change to {2:C}", _name, stock.Symbol, stock.Price);
+  //    }
+  //    public Stock Stock
+  //    {
+  //        get { return _stock; }
+  //        set { _stock = value; }
+  //    }
+  //}
+
+  //// The 'ConcreteSubject' class
+  //class IBM : Stock
+  //{
+  //    public IBM(string symbol, double price) : base(symbol, price) { }
+  //}
+
+  //// The 'Observer' interface
+  //interface IInvestor
+  //{
+  //    void Update(Stock stock);
+  //}
+
+  //// The 'Subject' abstract class
+  //abstract class Stock
+  //{
+  //    private string _symbol;
+  //    private double _price;
+  //    private List<IInvestor> _investors = new List<IInvestor>();
+  //    // Constructor
+  //    public Stock(string symbol, double price)
+  //    {
+  //        this._symbol = symbol;
+  //        this._price = price;
+  //    }
+  //    public void Attach(IInvestor investor)
+  //    {
+  //        _investors.Add(investor);
+  //    }
+  //    public void Detach(IInvestor investor)
+  //    {
+  //        _investors.Remove(investor);
+  //    }
+  //    public void Notify()
+  //    {
+  //        foreach (IInvestor investor in _investors)
+  //        {
+  //            investor.Update(this);
+  //        }
+  //        //Console.WriteLine("");
+  //    }
+  
+  //    public double Price
+  //    {
+  //        get { return _price; }
+  //        set
+  //        {
+  //            if (_price != value)
+  //            {
+  //                _price = value;
+  //                Notify();
+  //            }
+  //        }
+  //    }
+  
+  //    public string Symbol
+  //    {
+  //        get { return _symbol; }
+  //    }
+  //}
+
 }
+
