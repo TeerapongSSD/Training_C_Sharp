@@ -1,0 +1,10 @@
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\bin\Debug\GofPattern.exe.config
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\bin\Debug\GofPattern.exe
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\bin\Debug\GofPattern.pdb
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.csprojResolveAssemblyReference.cache
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.Properties.Resources.resources
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.csproj.GenerateResource.Cache
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.exe
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.pdb
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.frmGof.resources
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.frmLinq.resources
