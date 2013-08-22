@@ -37,6 +37,10 @@
             this.btnFactory = new System.Windows.Forms.Button();
             this.btnFacade = new System.Windows.Forms.Button();
             this.btnObsever = new System.Windows.Forms.Button();
+            this.btnChain = new System.Windows.Forms.Button();
+            this.btnCommand = new System.Windows.Forms.Button();
+            this.btnDecorator = new System.Windows.Forms.Button();
+            this.btnBridge = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSingleton
@@ -91,7 +95,7 @@
             // 
             // btnIterator
             // 
-            this.btnIterator.Location = new System.Drawing.Point(17, 229);
+            this.btnIterator.Location = new System.Drawing.Point(15, 230);
             this.btnIterator.Name = "btnIterator";
             this.btnIterator.Size = new System.Drawing.Size(282, 42);
             this.btnIterator.TabIndex = 5;
@@ -101,7 +105,7 @@
             // 
             // btnFactory
             // 
-            this.btnFactory.Location = new System.Drawing.Point(15, 273);
+            this.btnFactory.Location = new System.Drawing.Point(14, 274);
             this.btnFactory.Name = "btnFactory";
             this.btnFactory.Size = new System.Drawing.Size(282, 42);
             this.btnFactory.TabIndex = 6;
@@ -111,7 +115,7 @@
             // 
             // btnFacade
             // 
-            this.btnFacade.Location = new System.Drawing.Point(15, 316);
+            this.btnFacade.Location = new System.Drawing.Point(14, 317);
             this.btnFacade.Name = "btnFacade";
             this.btnFacade.Size = new System.Drawing.Size(282, 42);
             this.btnFacade.TabIndex = 7;
@@ -121,7 +125,7 @@
             // 
             // btnObsever
             // 
-            this.btnObsever.Location = new System.Drawing.Point(15, 359);
+            this.btnObsever.Location = new System.Drawing.Point(14, 360);
             this.btnObsever.Name = "btnObsever";
             this.btnObsever.Size = new System.Drawing.Size(282, 42);
             this.btnObsever.TabIndex = 8;
@@ -129,11 +133,55 @@
             this.btnObsever.UseVisualStyleBackColor = true;
             this.btnObsever.Click += new System.EventHandler(this.btnObsever_Click);
             // 
+            // btnChain
+            // 
+            this.btnChain.Location = new System.Drawing.Point(299, 144);
+            this.btnChain.Name = "btnChain";
+            this.btnChain.Size = new System.Drawing.Size(282, 42);
+            this.btnChain.TabIndex = 12;
+            this.btnChain.Text = "Chain Of Responsibility";
+            this.btnChain.UseVisualStyleBackColor = true;
+            this.btnChain.Click += new System.EventHandler(this.btnChain_Click);
+            // 
+            // btnCommand
+            // 
+            this.btnCommand.Location = new System.Drawing.Point(299, 101);
+            this.btnCommand.Name = "btnCommand";
+            this.btnCommand.Size = new System.Drawing.Size(282, 42);
+            this.btnCommand.TabIndex = 11;
+            this.btnCommand.Text = "Command";
+            this.btnCommand.UseVisualStyleBackColor = true;
+            this.btnCommand.Click += new System.EventHandler(this.btnCommand_Click);
+            // 
+            // btnDecorator
+            // 
+            this.btnDecorator.Location = new System.Drawing.Point(299, 58);
+            this.btnDecorator.Name = "btnDecorator";
+            this.btnDecorator.Size = new System.Drawing.Size(282, 42);
+            this.btnDecorator.TabIndex = 10;
+            this.btnDecorator.Text = "Decorator";
+            this.btnDecorator.UseVisualStyleBackColor = true;
+            this.btnDecorator.Click += new System.EventHandler(this.btnDecorator_Click);
+            // 
+            // btnBridge
+            // 
+            this.btnBridge.Location = new System.Drawing.Point(299, 14);
+            this.btnBridge.Name = "btnBridge";
+            this.btnBridge.Size = new System.Drawing.Size(282, 42);
+            this.btnBridge.TabIndex = 9;
+            this.btnBridge.Text = "Bridge";
+            this.btnBridge.UseVisualStyleBackColor = true;
+            this.btnBridge.Click += new System.EventHandler(this.btnBridge_Click);
+            // 
             // frmGof
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 413);
+            this.ClientSize = new System.Drawing.Size(590, 413);
+            this.Controls.Add(this.btnChain);
+            this.Controls.Add(this.btnCommand);
+            this.Controls.Add(this.btnDecorator);
+            this.Controls.Add(this.btnBridge);
             this.Controls.Add(this.btnObsever);
             this.Controls.Add(this.btnFacade);
             this.Controls.Add(this.btnFactory);
@@ -161,6 +209,10 @@
         private System.Windows.Forms.Button btnFactory;
         private System.Windows.Forms.Button btnFacade;
         private System.Windows.Forms.Button btnObsever;
+        private System.Windows.Forms.Button btnChain;
+        private System.Windows.Forms.Button btnCommand;
+        private System.Windows.Forms.Button btnDecorator;
+        private System.Windows.Forms.Button btnBridge;
     }
 }
 

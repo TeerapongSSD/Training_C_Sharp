@@ -46,21 +46,44 @@ namespace GofPattern
 
         private void btnComposite_Click(object sender, EventArgs e)
         {
-            CompositeSSD Test1 = new CompositeSSD("Mr.Test1", 1);
-            CompositeOntheRoad Test2 = new CompositeOntheRoad("Mr.Test2", 2);
-            CompositeOntheRoad Test3 = new CompositeOntheRoad("Mr.Test3", 3);
-            CompositeOntheRoad Test4 = new CompositeOntheRoad("Mr.Test4", 4);
-            CompositeSSD Test5 = new CompositeSSD("Mr.Test5", 5);
+            var compositeGraphic = new CompositeGraphic();
+            var compositeGraphic1 = new CompositeGraphic();
+            var compositeGraphic2 = new CompositeGraphic();
 
-            Test2.AddSubordinate(Test1);
-            Test3.AddSubordinate(Test2);
-            Test3.AddSubordinate(Test4);
-            Test4.AddSubordinate(Test5);
+            //Add 1 Graphic to compositeGraphic1
+            compositeGraphic1.Add(new Ellipse());
 
-            if (Test3 is IEmployee)
-            {
-                (Test3 as IEmployee).ShowNumber();
-            }
+            //Add 2 Graphic to compositeGraphic2
+            compositeGraphic2.AddRange(new Ellipse(), new Ellipse());
+
+
+            /*Add 1 Graphic, compositeGraphic1, and 
+              compositeGraphic2 to compositeGraphic */
+            compositeGraphic.AddRange(new Ellipse(), new Ellipse(),
+                compositeGraphic1,
+                compositeGraphic2); 
+
+            /*Prints the complete graphic 
+            (four times the string "Ellipse").*/
+            compositeGraphic.Print();
+           // Console.ReadLine();
+
+
+            //CompositeSSD Test1 = new CompositeSSD("Mr.Test1", 1);
+            //CompositeOntheRoad Test2 = new CompositeOntheRoad("Mr.Test2", 2);
+            //CompositeOntheRoad Test3 = new CompositeOntheRoad("Mr.Test3", 3);
+            //CompositeOntheRoad Test4 = new CompositeOntheRoad("Mr.Test4", 4);
+            //CompositeSSD Test5 = new CompositeSSD("Mr.Test5", 5);
+
+            //Test2.AddSubordinate(Test1);
+            //Test3.AddSubordinate(Test2);
+            //Test3.AddSubordinate(Test4);
+            //Test4.AddSubordinate(Test5);
+
+            //if (Test3 is IEmployee)
+            //{
+            //    (Test3 as IEmployee).ShowNumber();
+            //}
         }
 
         #endregion
@@ -72,7 +95,7 @@ namespace GofPattern
             A Ontheroad = new A();
             CompanyName OntheroadBand = Ontheroad.GetBread(CompanyBase.OntheRoad);
             OntheroadBand.Bake();
-
+             
             B Ssd = new B();
             CompanyName SsdBread = Ssd.GetBread(CompanyBase.SSD);
             SsdBread.Bake();
@@ -90,7 +113,7 @@ namespace GofPattern
             test.Request();
         }
 
-        #endregion
+        #endregion 
 
         #region Iterator
 
@@ -111,7 +134,7 @@ namespace GofPattern
                     yield return n;
                 }
             }
-        }
+        } 
 
         #endregion
 
@@ -160,6 +183,73 @@ namespace GofPattern
 
             // Wait for user
           
+        }
+
+        #endregion
+
+        #region Bridge 
+
+        private void btnBridge_Click(object sender, EventArgs e)
+        {
+            Abstraction ab = new RefinedAbstraction();
+            ab.Implementor = new ConcreteImplementorA();
+            ab.Operation();
+            ab.Implementor = new ConcreteImplementorB();
+            ab.Operation();
+        }
+
+        #endregion
+
+        #region Decorator
+
+        private void btnDecorator_Click(object sender, EventArgs e)
+        {
+            ConcreteComponent c = new ConcreteComponent();
+            ConcreteDecoratorA d1 = new ConcreteDecoratorA();
+            ConcreteDecoratorB d2 = new ConcreteDecoratorB();
+
+            // Link decorators
+            d1.SetComponent(c);
+            d2.SetComponent(d1);
+
+            d2.Operation();
+        }
+
+        #endregion
+
+        #region Command
+
+        private void btnCommand_Click(object sender, EventArgs e)
+        {
+            Receiver receiver = new Receiver();
+            Command command = new ConcreteCommand(receiver);
+            Invoker invoker = new Invoker();
+
+            // Set and execute command
+            invoker.SetCommand(command);
+            invoker.ExecuteCommand();
+        }
+
+        #endregion
+
+        #region Chain
+
+        private void btnChain_Click(object sender, EventArgs e)
+        {
+            Handler h1 = new ConcreteHandler1();
+            Handler h2 = new ConcreteHandler2();
+            Handler h3 = new ConcreteHandler3();
+            h1.SetSuccessor(h2);
+            h2.SetSuccessor(h3);
+
+            // Generate and process request
+            int[] requests = { 2, 5, 14, 22, 18, 3, 27, 20 };
+
+            foreach (int request in requests)
+            {
+                h1.HandleRequest(request);
+            }
+ 
         }
 
         #endregion
@@ -453,7 +543,7 @@ namespace GofPattern
 
    #endregion
 
-   #region Facade Class
+    #region Facade Class
 
    class FacadeOne
    {
@@ -508,8 +598,8 @@ namespace GofPattern
    }
 
    #endregion
-
-   #region Observer Class
+     
+    #region Observer Class
 
    abstract class Subject
   {
@@ -579,87 +669,313 @@ namespace GofPattern
 
    #endregion
 
+    #region Other Composite
 
-  //// The 'ConcreteObserver' class
-  //class Investor : IInvestor
-  //{
-  //    private string _name;
-  //    private Stock _stock;
-  //    public Investor(string name)
-  //    {
-  //        this._name = name;
-  //    }
-  //    public void Update(Stock stock)
-  //    {
-  //        Console.WriteLine("Notified {0} of {1}'s " +
-  //          "change to {2:C}", _name, stock.Symbol, stock.Price);
-  //    }
-  //    public Stock Stock
-  //    {
-  //        get { return _stock; }
-  //        set { _stock = value; }
-  //    }
-  //}
+  public interface IGraphic
+  {
+      void Print();
+  }
+  //Leaf
+  public class Ellipse : IGraphic
+  {
+      //Prints the graphic
+      public void Print()
+      {
+          Console.WriteLine("Ellipse");
+      }
+  }
+  //Composite
+  public class CompositeGraphic : IGraphic
+  {
+      //Collection of Graphics.
+      private readonly List<IGraphic> graphics;
 
-  //// The 'ConcreteSubject' class
-  //class IBM : Stock
-  //{
-  //    public IBM(string symbol, double price) : base(symbol, price) { }
-  //}
+      //Constructor 
+      public CompositeGraphic()
+      {
+          //initialize generic Collection(Composition)
+          graphics = new List<IGraphic>();
+      }
+      //Adds the graphic to the composition
+      public void Add(IGraphic graphic)
+      {
+          graphics.Add(graphic);
+      }
+      //Adds multiple graphics to the composition
+      public void AddRange(params IGraphic[] graphic)
+      {
+          graphics.AddRange(graphic);
+      }
+      //Removes the graphic from the composition
+      public void Delete(IGraphic graphic)
+      {
+          graphics.Remove(graphic);
+      }
+      //Prints the graphic.
+      public void Print()
+      {
+          foreach (var childGraphic in graphics)
+          {
+              childGraphic.Print();
+          }
+      }
+  }
 
-  //// The 'Observer' interface
-  //interface IInvestor
-  //{
-  //    void Update(Stock stock);
-  //}
 
-  //// The 'Subject' abstract class
-  //abstract class Stock
-  //{
-  //    private string _symbol;
-  //    private double _price;
-  //    private List<IInvestor> _investors = new List<IInvestor>();
-  //    // Constructor
-  //    public Stock(string symbol, double price)
-  //    {
-  //        this._symbol = symbol;
-  //        this._price = price;
-  //    }
-  //    public void Attach(IInvestor investor)
-  //    {
-  //        _investors.Add(investor);
-  //    }
-  //    public void Detach(IInvestor investor)
-  //    {
-  //        _investors.Remove(investor);
-  //    }
-  //    public void Notify()
-  //    {
-  //        foreach (IInvestor investor in _investors)
-  //        {
-  //            investor.Update(this);
-  //        }
-  //        //Console.WriteLine("");
-  //    }
+  #endregion
+
+    #region Bridge Class
+
+  class Abstraction
+  {
+      protected Implementor implementor;
+
+      public Implementor Implementor
+      {
+          set { implementor = value; }
+      }
+
+      public virtual void Operation()
+      {
+          implementor.Operation();
+      }
+  }
+     
+  abstract class Implementor
+  {
+      public abstract void Operation();
+  }
+
+  class RefinedAbstraction : Abstraction
+  {
+      public override void Operation()
+      {
+          implementor.Operation();
+      }
+  }
+
+  class ConcreteImplementorA : Implementor
+  {
+      public override void Operation()
+      {
+          Console.WriteLine("ConcreteImplementorA Operation");
+      }
+  }
+
+  class ConcreteImplementorB : Implementor
+  {
+      public override void Operation()
+      {
+          Console.WriteLine("ConcreteImplementorB Operation");
+      }
+  }
+
+  #endregion
+
+    #region Decorator
+
+  abstract class Component
+  {
+      public abstract void Operation();
+  }
+
+  /// <summary>
+  /// The 'ConcreteComponent' class
+  /// </summary>
+  class ConcreteComponent : Component 
+  {
+      public override void Operation()
+      {
+          Console.WriteLine("ConcreteComponent.Operation()");
+      }
+  }
+
+  /// <summary>
+  /// The 'Decorator' abstract class
+  /// </summary>
+  abstract class Decorator : Component
+  {
+      protected Component component;
+
+      public void SetComponent(Component component)
+      {
+          this.component = component;
+      }
+
+      public override void Operation()
+      {
+          if (component != null)
+          {
+              component.Operation();
+          }
+      }
+  }
+
+  /// <summary>
+  /// The 'ConcreteDecoratorA' class
+  /// </summary>
+  class ConcreteDecoratorA : Decorator
+  {
+      public override void Operation()
+      {
+          base.Operation();
+          Console.WriteLine("ConcreteDecoratorA.Operation()");
+      }
+  }
+
+  /// <summary>
+  /// The 'ConcreteDecoratorB' class
+  /// </summary>
+  class ConcreteDecoratorB : Decorator
+  {
+      public override void Operation()
+      {
+          base.Operation();
+          AddedBehavior();
+          Console.WriteLine("ConcreteDecoratorB.Operation()");
+      }
+
+      void AddedBehavior()
+      {
+      }
+  }
+
+#endregion
+
+    #region Command
+
+  abstract class Command
+  {
+      protected Receiver receiver;
+
+      // Constructor
+      public Command(Receiver receiver)
+      {
+          this.receiver = receiver;
+      }
+
+      public abstract void Execute();
+  }
+
+  /// <summary>
+  /// The 'ConcreteCommand' class
+  /// </summary>
+  class ConcreteCommand : Command
+  {
+      // Constructor
+      public ConcreteCommand(Receiver receiver) :
+          base(receiver)
+      {
+      }
+
+      public override void Execute()
+      {
+          receiver.Action();
+      }
+  }
+
+  /// <summary>
+  /// The 'Receiver' class
+  /// </summary>
+  class Receiver
+  {
+      public void Action()
+      {
+          Console.WriteLine("Called Receiver.Action()");
+      }
+  }
+
+  /// <summary>
+  /// The 'Invoker' class
+  /// </summary>
+  class Invoker
+  {
+      private Command _command;
+
+      public void SetCommand(Command command)
+      {
+          this._command = command;
+      }
+
+      public void ExecuteCommand()
+      {
+          _command.Execute();
+      }
+  }
+
+#endregion
+
+    #region Chain
+
+  abstract class Handler
+  {
+      protected Handler successor;
+
+      public void SetSuccessor(Handler successor)
+      {
+          this.successor = successor;
+      }
+
+      public abstract void HandleRequest(int request);
+  }
+
+  /// <summary>
+  /// The 'ConcreteHandler1' class
+  /// </summary>
+  class ConcreteHandler1 : Handler
+  {
+      public override void HandleRequest(int request)
+      {
+          if (request >= 0 && request < 10)
+          {
+              Console.WriteLine("{0} handled request {1}",
+                this.GetType().Name, request);
+          }
+          else if (successor != null)
+          {
+              successor.HandleRequest(request);
+          }
+      }
+  }
+
+  /// <summary>
+  /// The 'ConcreteHandler2' class
+  /// </summary>
+  class ConcreteHandler2 : Handler
+  {
+      public override void HandleRequest(int request)
+      {
+          if (request >= 10 && request < 20)
+          {
+              Console.WriteLine("{0} handled request {1}",
+                this.GetType().Name, request);
+          }
+          else if (successor != null)
+          {
+              successor.HandleRequest(request);
+          }
+      }
+  }
+
+  /// <summary>
+  /// The 'ConcreteHandler3' class
+  /// </summary>
+  class ConcreteHandler3 : Handler
+  {
+      public override void HandleRequest(int request)
+      {
+          if (request >= 20 && request < 30)
+          {
+              Console.WriteLine("{0} handled request {1}",
+                this.GetType().Name, request);
+          }
+          else if (successor != null)
+          {
+              successor.HandleRequest(request);
+          }
+      }
+  }
+#endregion
   
-  //    public double Price
-  //    {
-  //        get { return _price; }
-  //        set
-  //        {
-  //            if (_price != value)
-  //            {
-  //                _price = value;
-  //                Notify();
-  //            }
-  //        }
-  //    }
-  
-  //    public string Symbol
-  //    {
-  //        get { return _symbol; }
-  //    }
-  //}
-
 }
 

@@ -8,3 +8,6 @@ C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.exe
 C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.pdb
 C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.frmGof.resources
 C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.frmLinq.resources
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\obj\Debug\GofPattern.MDIParent1.resources
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\bin\Debug\EntityFramework.dll
+C:\Users\Admin-Teerapong\Desktop\GofPattern\GofPattern\bin\Debug\EntityFramework.xml
